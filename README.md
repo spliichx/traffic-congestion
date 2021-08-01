@@ -7,7 +7,7 @@ This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contai
 - Model Evaluation 
 
 
-# Data columns:
+# Data columns
 
 ## 1. Independent Variables (Features)
 - IntersectionId: Represents a unique intersectionID for some intersection of roads within a city.

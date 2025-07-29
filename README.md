@@ -1,15 +1,17 @@
-# Traffic Congestion 
-This project delves into finding different ways of improving safety, optimizing operations and identifying diverse opportunities for infrastructural challenges. 
-This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contains information regarding traffic congestions in most of United States cities.  This aims at accurately predicting possible future congestions. Breaking this project further includes:
+# Traffic Congestion
+
+This project delves into finding different ways of improving safety, optimizing operations and identifying diverse opportunities for infrastructural challenges.
+This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contains information regarding traffic congestions in most of United States cities. This aims at accurately predicting possible future congestions. Breaking this project further includes:
+
 - Exporatory Data Analysis
 - Data Preprocessing
-- Algorithm Selection 
-- Model Evaluation 
-
+- Algorithm Selection
+- Model Evaluation
 
 # Data columns
 
 ## 1. Independent Variables (Features)
+
 - IntersectionId: Represents a unique intersectionID for some intersection of roads within a city.
 - Latitude: The latitude of the intersection.
 - Longitude: The longitude of the intersection.
@@ -24,6 +26,7 @@ This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contai
 - City: Name of the city
 
 ## 2. Dependent Variables (Targets)
+
 - TotalTimeStopped_p20: Total time for which 20% of the vehicles had to stop at an intersection.
 - TotalTimeStopped_p40: Total time for which 40% of the vehicles had to stop at an intersection.
 - TotalTimeStopped_p50: Total time for which 50% of the vehicles had to stop at an intersection.
@@ -41,6 +44,7 @@ This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contai
 - DistanceToFirstStop_p80: How far before the intersection the 80% of the vehicles stopped for the first time.
 
 ## 3. Target Output
+
 Total time stopped at an intersection, 20th, 50th, 80th percentiles and Distance between the intersection and the first place the vehicle stopped and started waiting, 20th, 50th, 80th percentiles
 
 - TotalTimeStopped_p20
@@ -49,6 +53,3 @@ Total time stopped at an intersection, 20th, 50th, 80th percentiles and Distance
 - DistanceToFirstStop_p20
 - DistanceToFirstStop_p50
 - DistanceToFirstStop_p80
-
-
-

@@ -40,7 +40,7 @@ This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contai
 - DistanceToFirstStop_p60: How far before the intersection the 60% of the vehicles stopped for the first time.
 - DistanceToFirstStop_p80: How far before the intersection the 80% of the vehicles stopped for the first time.
 
-## 3. Target Output (based on Competition's Rules)
+## 3. Target Output
 Total time stopped at an intersection, 20th, 50th, 80th percentiles and Distance between the intersection and the first place the vehicle stopped and started waiting, 20th, 50th, 80th percentiles
 
 - TotalTimeStopped_p20

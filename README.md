@@ -1,55 +1,116 @@
-# Traffic Congestion
+# Traffic Congestion Prediction
 
-This project delves into finding different ways of improving safety, optimizing operations and identifying diverse opportunities for infrastructural challenges.
-This dataset is obtained from [GeoTab](https://data.geotab.com/ "GEOTAB") contains information regarding traffic congestions in most of United States cities. This aims at accurately predicting possible future congestions. Breaking this project further includes:
+A machine learning project focused on predicting traffic congestion patterns at intersections across major US cities using GeoTab traffic data.
 
-- Exporatory Data Analysis
-- Data Preprocessing
-- Algorithm Selection
-- Model Evaluation
+## 🎯 Project Overview
 
-# Data columns
+This project aims to improve road safety, optimize traffic operations, and identify opportunities for infrastructure improvements by accurately predicting future traffic congestions. The analysis focuses on intersection-level traffic patterns and stop-time predictions.
 
-## 1. Independent Variables (Features)
+## 📊 Dataset
 
-- IntersectionId: Represents a unique intersectionID for some intersection of roads within a city.
-- Latitude: The latitude of the intersection.
-- Longitude: The longitude of the intersection.
-- EntryStreetName: The street name from which the vehicle entered towards the intersection.
-- ExitStreetName: The street name to which the vehicle goes from the intersection.
-- EntryHeading: Direction to which the car was heading while entering the intersection.
-- ExitHeading: Direction to which the car went after it went through the intersection.
-- Hour: The hour of the day.
-- Weekend: It's weekend or not.
-- Month: Which Month it is.
-- Path: It is a concatination in the format: EntryStreetName_EntryHeading ExitStreetName_ExitHeading.
-- City: Name of the city
+The dataset is sourced from **GeoTab** and contains comprehensive traffic congestion information from intersections in major United States cities.
 
-## 2. Dependent Variables (Targets)
+### Features (Independent Variables)
 
-- TotalTimeStopped_p20: Total time for which 20% of the vehicles had to stop at an intersection.
-- TotalTimeStopped_p40: Total time for which 40% of the vehicles had to stop at an intersection.
-- TotalTimeStopped_p50: Total time for which 50% of the vehicles had to stop at an intersection.
-- TotalTimeStopped_p60: Total time for which 60% of the vehicles had to stop at an intersection.
-- TotalTimeStopped_p80: Total time for which 80% of the vehicles had to stop at an intersection.
-- TimeFromFirstStop_p20: Time taken for 20% of the vehicles to stop again after crossing an intersection.
-- TimeFromFirstStop_p40: Time taken for 40% of the vehicles to stop again after crossing an intersection.
-- TimeFromFirstStop_p50: Time taken for 50% of the vehicles to stop again after crossing a intersection.
-- TimeFromFirstStop_p60: Time taken for 60% of the vehicles to stop again after crossing a intersection.
-- TimeFromFirstStop_p80: Time taken for 80% of the vehicles to stop again after crossing a intersection.
-- DistanceToFirstStop_p20: How far before the intersection the 20% of the vehicles stopped for the first time.
-- DistanceToFirstStop_p40: How far before the intersection the 40% of the vehicles stopped for the first time.
-- DistanceToFirstStop_p50: How far before the intersection the 50% of the vehicles stopped for the first time.
-- DistanceToFirstStop_p60: How far before the intersection the 60% of the vehicles stopped for the first time.
-- DistanceToFirstStop_p80: How far before the intersection the 80% of the vehicles stopped for the first time.
+| Variable | Description |
+|----------|-------------|
+| `IntersectionId` | Unique identifier for each intersection |
+| `Latitude` | Geographic latitude of the intersection |
+| `Longitude` | Geographic longitude of the intersection |
+| `EntryStreetName` | Street name where vehicles enter the intersection |
+| `ExitStreetName` | Street name where vehicles exit the intersection |
+| `EntryHeading` | Vehicle direction when entering intersection |
+| `ExitHeading` | Vehicle direction when exiting intersection |
+| `Hour` | Hour of the day (0-23) |
+| `Weekend` | Boolean indicator for weekend days |
+| `Month` | Month of the year |
+| `Path` | Concatenated path: `EntryStreetName_EntryHeading ExitStreetName_ExitHeading` |
+| `City` | Name of the city |
 
-## 3. Target Output
+### Target Variables
 
-Total time stopped at an intersection, 20th, 50th, 80th percentiles and Distance between the intersection and the first place the vehicle stopped and started waiting, 20th, 50th, 80th percentiles
+#### Total Time Stopped Metrics
+- `TotalTimeStopped_p20/40/50/60/80`: Total stop time at intersection for 20th, 40th, 50th, 60th, and 80th percentiles of vehicles
 
-- TotalTimeStopped_p20
-- TotalTimeStopped_p50
-- TotalTimeStopped_p80
-- DistanceToFirstStop_p20
-- DistanceToFirstStop_p50
-- DistanceToFirstStop_p80
+#### Time From First Stop Metrics  
+- `TimeFromFirstStop_p20/40/50/60/80`: Time taken for vehicles to stop again after crossing intersection (by percentile)
+
+#### Distance to First Stop Metrics
+- `DistanceToFirstStop_p20/40/50/60/80`: Distance before intersection where vehicles first stopped (by percentile)
+
+### Primary Prediction Targets
+
+The model focuses on predicting these key metrics:
+- **Total Time Stopped**: 20th, 50th, 80th percentiles
+- **Distance to First Stop**: 20th, 50th, 80th percentiles
+
+## 🔬 Methodology
+
+The project follows a structured machine learning pipeline:
+
+1. **Exploratory Data Analysis (EDA)**
+   - Data distribution analysis
+   - Feature correlation studies
+   - Traffic pattern visualization
+
+2. **Data Preprocessing**
+   - Data cleaning and validation
+   - Feature engineering
+   - Handling missing values
+   - Data normalization/scaling
+
+3. **Algorithm Selection**
+   - Model comparison and evaluation
+   - Hyperparameter tuning
+   - Cross-validation
+
+4. **Model Evaluation**
+   - Performance metrics assessment
+   - Validation on test datasets
+   - Result interpretation
+
+## 🚀 Getting Started
+
+### Prerequisites
+```bash
+Python 3.7+
+Jupyter Notebook
+Required libraries (see requirements.txt)
+```
+
+### Installation
+```bash
+git clone https://github.com/yourusername/traffic-congestion-prediction
+cd traffic-congestion-prediction
+pip install -r requirements.txt
+```
+
+### Usage
+```bash
+jupyter notebook
+# Open and run the main analysis notebook
+```
+
+## 📈 Expected Outcomes
+
+- Accurate prediction of traffic congestion patterns
+- Identification of high-risk intersections
+- Insights for traffic optimization strategies
+- Data-driven recommendations for infrastructure improvements
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- GeoTab for providing the traffic congestion dataset
+- Contributors and maintainers of the project
+
+---
+
+*For questions or suggestions, please open an issue or contact the maintainers.*

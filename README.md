@@ -6,7 +6,7 @@ A machine learning project focused on predicting traffic congestion patterns at 
 
 This project aims to improve road safety, optimize traffic operations, and identify opportunities for infrastructure improvements by accurately predicting future traffic congestions. The analysis focuses on intersection-level traffic patterns and stop-time predictions.
 
-## 📊 Dataset
+## Dataset
 
 The dataset is sourced from **GeoTab** and contains comprehensive traffic congestion information from intersections in major United States cities.
 

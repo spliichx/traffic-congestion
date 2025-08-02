@@ -2,7 +2,7 @@
 
 A machine learning project focused on predicting traffic congestion patterns at intersections across major US cities using GeoTab traffic data.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project aims to improve road safety, optimize traffic operations, and identify opportunities for infrastructure improvements by accurately predicting future traffic congestions. The analysis focuses on intersection-level traffic patterns and stop-time predictions.
 
@@ -69,7 +69,7 @@ The project follows a structured machine learning pipeline:
    - Validation on test datasets
    - Result interpretation
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 ```bash
@@ -98,15 +98,15 @@ jupyter notebook
 - Insights for traffic optimization strategies
 - Data-driven recommendations for infrastructure improvements
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - GeoTab for providing the traffic congestion dataset
 - Contributors and maintainers of the project
